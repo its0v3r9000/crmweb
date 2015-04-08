@@ -1,0 +1,14 @@
+<h1>Contacts Directory</h1>
+
+<ul>
+	<% @contacts.each do |contact| %>
+		<h3><%= "---------Contact--------" %></h3>
+		<li><%= contact.first_name %> <%= contact.last_name %></li>
+		<li><%= contact.email %></li>
+	<% end %>
+
+
+</ul>
+
+
+<h3><a href="/">    Back to index</a></h3>
