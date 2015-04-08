@@ -1,8 +1,8 @@
 <h1>Contacts Directory</h1>
 
 <ul>
-	<% @contacts.each do |contact| %>
-		<h3><%= "---------Contact--------" %></h3>
+	<% $rolodex.contacts.each do |contact| %>
+		<h3><%= "---------Contact #{contact.id}--------" %></h3>
 		<li><%= contact.first_name %> <%= contact.last_name %></li>
 		<li><%= contact.email %></li>
 	<% end %>
