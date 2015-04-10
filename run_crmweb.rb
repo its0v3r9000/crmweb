@@ -1,0 +1,3 @@
+require 'crmweb'
+
+CrmApp.run!

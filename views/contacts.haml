@@ -1,0 +1,10 @@
+%h1 Contacts Directory
+%ul
+  - $rolodex.contacts.each do |contact|
+    %h3= "---------Contact #{contact.id}--------"
+    %li
+      = contact.first_name
+      = contact.last_name
+    %li= contact.email
+%h3
+  %a{:href => "/"} Back to index

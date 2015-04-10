@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %title Customer Relations Manager
+    %link(rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css")
+    %link(rel="stylesheet" href="css/styles.css")
+  %body
+    #wrapper
+      #header
+        %h1 Customer Relations Manager
+        %h2 A Simple Site made with Sinatra, HAML, and Ruby.
+      #nav
+        %ol
+          %a(href="/")
+            %li Home
+          %a(href="about")
+            %li About
+          %a(href="newcontacts")
+            %li New Contact
+
+      #content
+        =yield
+
+      #side_bar
+        %h1 Contacts Directory
+        %ul
+          - $rolodex.contacts.each do |contact|
+            %h3= "---------Contact #{contact.id}--------"
+            %li
+              = contact.first_name
+              = contact.last_name
+            %li= contact.email
+
+      #footer
+        %p
+          This is the footer.
